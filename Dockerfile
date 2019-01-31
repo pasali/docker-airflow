@@ -1,6 +1,6 @@
 FROM puckel/docker-airflow:1.10.2
 
-RUN $(which pip) install --user kubernetes
+RUN $(which pip) install --user  kubernetes cryptography
 
 COPY plugins /usr/local/airflow/plugins
 
