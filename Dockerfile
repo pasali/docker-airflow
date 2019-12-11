@@ -1,8 +1,6 @@
-FROM puckel/docker-airflow:1.10.2
+FROM puckel/docker-airflow:1.10.6
 
-RUN $(which pip) install --user  kubernetes cryptography prometheus_client
-
-COPY plugins /usr/local/airflow/plugins
+RUN $(which pip) install --user  kubernetes cryptography airflow-exporter
 
 COPY script/entrypoint.sh /entrypoint.sh
 
